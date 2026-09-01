@@ -1,0 +1,4 @@
+interface:
+  display_name: "Read The Damn Docs"
+  short_description: "Read current docs before relying on memory."
+  default_prompt: "Use $read-the-damn-docs to read current local and official documentation before implementation."
