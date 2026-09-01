@@ -1,8 +1,6 @@
 # Agent Skills
 
-My personal skill library for Pi, Claude Code, Codex, and other tools that support the Agent Skills format.
-
-These skills are tuned to my workflow. Some descriptions and examples address me by name. They are public so I can version, reuse, and share them, but they are provided as is.
+My personal agent skill library
 
 ## Install with Pi
 
