@@ -24,6 +24,8 @@ Stop when the required facts are established. Gather option names, imports, life
 
 ## Apply and verify
 
+Before recommending a fork, check whether the package’s supported configuration or a suitable maintained alternative meets the requirements. Use a bounded trial when documentation cannot settle the decision.
+
 Use the evidence to answer or implement the request. Verify with the smallest useful check, such as a typecheck, focused test, build, schema check, dry run, or local reproduction.
 
 Name the documentation or source that materially affected the decision. If authoritative evidence is unavailable, state the missing source and narrow the claim instead of presenting memory as current fact.

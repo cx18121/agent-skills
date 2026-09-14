@@ -14,7 +14,7 @@ Default scope is the current branch against its merge base plus uncommitted chan
 
 A finding must name what disappears and what replaces it. Label its provenance as `branch`, `made-obsolete`, or `pre-existing` so the user can decide whether it belongs in the current change. Look for:
 
-1. Dead code, unused options, and speculative extension points.
+1. Dead code, unused options, and speculative extension points. Before calling code unused, trace its callers, entry points, and runtime selection. A documentation label alone is not evidence for deletion.
 2. A custom helper that the standard library, platform, dependency, or current codebase already provides.
 3. An abstraction with one caller and no concrete second variation.
 4. Parallel representations of the same fact.
