@@ -1,7 +1,7 @@
 ---
 name: make-interfaces-feel-better
 description: >-
-  Use for explicit UI polish and micro-detail work such as "make it feel better", "feels off", optical alignment, border radius, tabular numbers, icon weight, and motion restraint. Not for ordinary frontend work or whole-surface design, redesign, or critique, which belongs to Impeccable.
+  Use for explicit UI polish and micro-detail work such as "make it feel better", "feels off", optical alignment, border radius, tabular numbers, icon weight, and motion restraint. Not for ordinary frontend work or whole-surface redesign.
 ---
 
 # Details that make interfaces feel better

@@ -28,7 +28,6 @@ The directories follow the Agent Skills format. Copy or link the skills you want
 
 No credentials are stored in this repository. Skills that use external services read credentials from environment variables such as `FIRECRAWL_API_KEY` and `OPENAI_API_KEY`.
 
-The bundled Impeccable skill is based on version 4.1.1. It performs a cached update check against `https://impeccable.style` and may fetch design cards from that service when its relevant workflow runs. Updating it from upstream can overwrite the local Pi compatibility changes listed in [THIRD_PARTY.md](THIRD_PARTY.md).
 
 ## Licenses
 
