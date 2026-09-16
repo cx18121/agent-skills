@@ -8,7 +8,7 @@ The `better-ui`, `better-typography`, `better-layout`, `better-colors`, `better-
 
 ## Emil Kowalski skills
 
-The `apple-design`, `review-animations`, `animate`, `animation-vocabulary`, `find-animation-opportunities`, and `mobile-native` skills are from [emilkowalski/skills](https://github.com/emilkowalski/skills), copyright Emil Kowalski, under the MIT License.
+The `apple-design`, `review-animations`, `animate`, `animation-vocabulary`, `find-animation-opportunities`, `mobile-native`, and `emil-design-eng` skills are from [emilkowalski/skills](https://github.com/emilkowalski/skills), copyright Emil Kowalski, under the MIT License.
 
 ## Vercel Web Interface Guidelines
 
