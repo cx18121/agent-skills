@@ -9,6 +9,9 @@ Apply the Writing section of `~/.pi/agent/AGENTS.md`. Read that file if it is no
 
 ## Revise
 
+When the draft may have been machine-written, or the user says it reads as generated, read [references/ai-tells.md](references/ai-tells.md) first and check the text against its pattern list before editing.
+
+
 1. Preserve the facts, uncertainty, and intended meaning. Do not turn an estimate into a measured result or a suggestion into a decision.
 2. Give each sentence one main point. Split cramped sentences, but keep the explanation complete. Shorter is useful only when the reader still understands the claim.
 3. Name the person or tool doing the work. Explain necessary technical terms on first use. Replace invented compounds with ordinary phrasing.
