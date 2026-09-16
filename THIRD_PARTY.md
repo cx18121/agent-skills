@@ -4,11 +4,11 @@ This repository includes or adapts work from the following projects.
 
 ## Jakub Krehel skills
 
-The `better-ui`, `better-typography`, `better-layout`, `better-colors`, `better-accessibility`, `better-writing`, and `better-interface` skills are from [jakubkrehel/skills](https://github.com/jakubkrehel/skills), copyright Jakub Krehel, under the MIT License.
+The `better-ui`, `better-typography`, `better-layout`, `better-colors`, `better-accessibility`, and `better-writing` skills are from [jakubkrehel/skills](https://github.com/jakubkrehel/skills), copyright Jakub Krehel, under the MIT License.
 
 ## Emil Kowalski skills
 
-The `apple-design`, `review-animations`, `animate`, `animation-vocabulary`, `find-animation-opportunities`, `mobile-native`, and `emil-design-eng` skills are from [emilkowalski/skills](https://github.com/emilkowalski/skills), copyright Emil Kowalski, under the MIT License.
+The `apple-design`, `review-animations`, `animate`, `mobile-native`, and `emil-design-eng` skills are from [emilkowalski/skills](https://github.com/emilkowalski/skills), copyright Emil Kowalski, under the MIT License.
 
 ## Vercel Web Interface Guidelines
 
