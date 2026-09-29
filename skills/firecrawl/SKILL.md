@@ -1,11 +1,11 @@
 ---
 name: firecrawl
-description: Use Firecrawl for an explicit Firecrawl request, site mapping, bulk crawling, structured web extraction, or live page interaction that Pi's native web and browser tools cannot provide. Do not use for normal search or reading a known URL.
+description: Use Firecrawl for an explicit Firecrawl request, site mapping, bulk crawling, structured web extraction, or live page interaction that the native web and browser tools cannot provide. Do not use for normal search or reading a known URL.
 ---
 
 # Firecrawl
 
-Use the installed Firecrawl CLI when Charlie names Firecrawl or when the task needs a web capability Pi's native tools do not provide. Normal web search belongs to `web_search`. Reading known URLs belongs to `fetch_content`. Browser development belongs to Agent Browser when available. Visible or signed-in browser work belongs to Pi browser UI tools.
+Use the installed Firecrawl CLI when Charlie names Firecrawl or when the task needs a web capability the native tools do not provide. Normal web search and reading known URLs belong to the native web tools. Browser development belongs to Agent Browser when available.
 
 Start with current local truth:
 

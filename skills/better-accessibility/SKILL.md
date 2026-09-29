@@ -1,7 +1,6 @@
 ---
 name: better-accessibility
 description: Helps your project comply with accessibility standards and best practices.
-disable-model-invocation: true
 ---
 
 # Accessibility
