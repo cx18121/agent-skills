@@ -1,6 +1,6 @@
 ---
 name: animate
-description: Build an animation from scratch, making the decisions in the order that determines whether it feels right — should it animate at all, what purpose, which tool, which properties, which curve and duration, how it interrupts, how it exits. Writes the implementation. Use when asked to animate something, add motion, make a component feel alive, or build a transition. For critiquing existing motion use review-animations; for auditing a whole codebase use improve-animations.
+description: Build an animation from scratch, making the decisions in the order that determines whether it feels right — should it animate at all, what purpose, which tool, which properties, which curve and duration, how it interrupts, how it exits. Writes the implementation. Use when asked to animate something, add motion, make a component feel alive, or build a transition. For critiquing existing motion use review-animations.
 disable-model-invocation: true
 ---
 
@@ -14,7 +14,7 @@ When this skill is first invoked without a specific question, respond only with:
 
 Do not provide any other information until the user asks a question.
 
-A construction skill. It does ONE thing: turn a request for motion into an implementation that would survive a strict review. It does not audit a codebase (that's `improve-animations`), critique a diff (that's `review-animations`), hunt for places that could animate (that's `find-animation-opportunities`), or build for React Native (that's `animate-expo`).
+A construction skill. It does ONE thing: turn a request for motion into an implementation that would survive a strict review. Codebase audits, animation opportunity searches, and React Native implementations are outside this skill's scope. For critiquing a diff, use `review-animations`.
 
 ## Operating Posture
 
@@ -79,7 +79,7 @@ Walk down; stop at the first that fits.
 
 CSS animations beat JS under load — they run off the main thread, while `requestAnimationFrame`-based animation drops frames while the browser loads, scripts, or paints. Use CSS for predetermined motion, JS for dynamic and interruptible motion.
 
-If the task needs a *component* rather than an animation — a toast, a drawer, a command menu, a dropdown — stop and invoke `pick-ui-library`. Hand-rolling those is how you end up with a `<div>` dropdown and no focus management.
+If the task needs a component rather than an animation, reuse the project's existing accessible component or choose an accessible primitive before adding motion. Preserve its keyboard behavior and focus management.
 
 ### 4. Pick the properties
 
