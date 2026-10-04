@@ -1,6 +1,6 @@
 ---
 name: mobile-native
-description: Make a web app feel native on a phone — the small CSS and meta-tag fixes that separate "a website in a browser" from something that feels installed. Covers sticky hover states, tap highlight flashes, the 100vh bug, inputs that zoom the page, laggy taps, pull-to-refresh hijacking scroll, content under the notch, long-press selecting button text, carousels that scroll the wrong way, mismatched status bars, and the rule that you test on real hardware. Use when a web app is being built for or reviewed on mobile, when something "works in Chrome but feels wrong on my phone", when building a PWA, a bottom sheet, a carousel, a full-screen layout, or any touch interaction. For motion itself use animate. React Native is outside this skill's scope.
+description: Use when building or reviewing mobile web apps, PWAs, sheets, carousels, full-screen layouts, or touch UI, especially viewport, safe-area, scrolling, input, and browser quirks. Use animate for motion. Excludes React Native.
 ---
 
 # Feeling Native On Mobile

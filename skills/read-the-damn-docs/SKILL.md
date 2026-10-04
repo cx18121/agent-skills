@@ -1,6 +1,6 @@
 ---
 name: read-the-damn-docs
-description: Use when an answer or implementation depends on a third-party library, framework, SDK, API, CLI, cloud service, provider, or other version-sensitive contract. Also use for current or official behavior and consequential auth, security, billing, data, migration, deployment, compliance, or privacy claims.
+description: Read authoritative docs for third-party libraries, frameworks, SDKs, APIs, CLIs, providers, and version-sensitive behavior. Also use for consequential auth, security, billing, data, migration, deployment, compliance, or privacy claims.
 ---
 
 # Read The Damn Docs
