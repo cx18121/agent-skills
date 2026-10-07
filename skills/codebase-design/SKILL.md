@@ -114,6 +114,12 @@ Start from current pain rather than an architecture ceremony. Look for policy re
 
 Rank candidates by the caller burden they remove, the knowledge they localize, and the real changes they make easier. Use current call sites, defects, and change history as evidence. Do not create a seam for a hypothetical future implementation.
 
-Compare materially different interface designs in the parent when one design choice could change the module's depth. Use independent subagents only when separate design lanes can contribute distinct evidence.
+Match design effort to uncertainty and the cost of changing direction:
+
+- **Clear, local design.** Inspect actual callers and tests, then recommend directly.
+- **Meaningful interface choice.** Compare materially different designs in the parent. Show interface sketches, realistic caller usage, important invariants, and concrete tradeoffs rather than variations in naming.
+- **Costly choice with unresolved assumptions.** Use independent designers only when distinct exploration could expose an assumption or change the recommendation. Give them the same caller needs and constraints, with different plausible design approaches. Choose the number of agents from the useful design lanes, not a fixed minimum.
+
+Judge alternatives by caller burden, correctness, change locality, testability, and migration cost. Recommend the strongest design and explain why. Stop when further comparison is unlikely to change the choice.
 
 For dependency categories, seam discipline, and replace-don't-layer testing, read [DEEPENING.md](DEEPENING.md).
