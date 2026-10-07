@@ -24,6 +24,10 @@ Restart Pi. You can also copy or symlink individual skill directories into `~/.a
 
 The directories follow the Agent Skills format. Copy or link the skills you want into the location used by your agent.
 
+## Review-skill checks
+
+Run `node --test test/review-skills.test.mjs` to check review entry points, conditional references and retained scope safeguards. These are structural checks, not proof of future-agent judgment.
+
 ## External services
 
 No credentials are stored in this repository. Skills that use external services read credentials from environment variables such as `FIRECRAWL_API_KEY` and `OPENAI_API_KEY`.

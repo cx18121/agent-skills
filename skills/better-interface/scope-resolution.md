@@ -8,7 +8,7 @@ Try `refs/remotes/origin/HEAD`, then `gh repo view --json defaultBranchRef`, the
 
 ## Targets
 
-Accepted targets are `working`, `staged`, `branch`, `pr <n>`, a bare `<ref>` and an explicit `<a>..<b>` or `<a>...<b>` range. Anything else in the invocation is a `<ref>`.
+Resolve explicit domain or coverage modifiers separately from the Git target. Accepted targets are `working`, `staged`, `branch`, `pr <n>`, a bare `<ref>` and an explicit `<a>..<b>` or `<a>...<b>` range. An otherwise unrecognized target is a `<ref>`.
 
 Diff a branch against the **merge base**, three dots. Two dots reports every upstream commit that landed on the base branch as part of the change.
 

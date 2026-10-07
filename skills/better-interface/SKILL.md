@@ -1,15 +1,15 @@
 ---
 name: better-interface
-description: Combines all of the `better-*` skills into a single review across accessibility, layout, writing, typography, color and UI polish.
+description: Review UI screens, flows, branches, or PRs across design domains. Use for interface reviews; load specialists to match the requested coverage.
 ---
 
 # Interface review
 
-This skill runs a cross-discipline review. It routes the interface to each `better-*` skill, collects their evidence and consolidates one ranked verdict.
+This is the single interface-review entry point. It resolves a screen or change scope, routes the requested coverage to the owning `better-*` skills and consolidates one ranked verdict.
 
 Orchestration is all it owns. Accessibility rules belong to `better-accessibility`, structure to `better-layout`, copy to `better-writing`, type to `better-typography`, color to `better-colors`, visual polish and motion to `better-ui`. Never duplicate or override their rules here.
 
-Change-scoped review of uncommitted work, branches and pull requests belongs to `interface-review`, which resolves the scope and classifies findings before handing the review back.
+Change-scope handling lives in [change-review.md](change-review.md). Load it only for branch, pull-request, commit-range, or uncommitted-change reviews.
 
 ## Evidence, not taste
 
@@ -23,17 +23,17 @@ So the bar for reporting is evidence, not taste. The bar for `Approve` is that y
 
 Infer the screen, flow, feature, or repository scope from the request and current workspace. State the resolved scope in the output.
 
-Cover all of it across every domain skill listed under **Use domain skills as the sources of truth**, including the empty, loading, error and narrow-width states where they exist. Report at most 15 findings.
+Cover the resolved scope across the selected domains, including empty, loading, error and narrow-width states where they exist. Report at most 15 findings. A comprehensive review selects every domain below.
 
 When the scope is too large to inspect credibly, narrow it to one complete flow: the one the request centers on, or failing that the entry path every user must pass through. State the boundary and what it excluded. Never imply uninspected surfaces were reviewed.
 
-### 2. Send a change to `interface-review`
+### 2. Resolve changes within this entry point
 
-A request naming a branch, pull request, commit range, or uncommitted changes is a change review, not a screen review. Say so and ask the user to run `interface-review`, which is user-invoked and cannot be started from here.
+A request naming a branch, pull request, commit range, or uncommitted changes is a change review, not a screen review. A request to review the current work uses change mode even without a named target. Load [change-review.md](change-review.md) before inspecting the artifact. It owns reproducible scope resolution, removed-side inspection and finding classification.
 
-Never resolve a change scope here. Reading a diff, classifying findings and expanding changed files to affected surfaces belong to `interface-review`. Guess at them and the report has a scope nobody can check.
+Complete that mode without asking the user to invoke another skill. If it finds no change, follow its target-selection rule rather than inventing a last-commit review or silently widening into a repository audit.
 
-When `interface-review` hands a review back, it supplies the change scope, a status per finding and the change-scoped report format. Severity, ranking, the cap and the verdict stay here, and all three cover `Introduced` and `Regression` only.
+In change mode, severity, ranking, the cap and the verdict cover `Introduced` and `Regression` only. A screen, flow or explicitly requested repository audit uses audit mode and needs no Git change classification.
 
 ### 3. Recon before judgment
 
@@ -45,7 +45,7 @@ Read them to find where a finding belongs, not for permission to drop it. A docu
 
 ### 4. Use domain skills as the sources of truth
 
-Before reviewing, confirm that every owning skill below is available. Load and apply every available owner, and complete each domain review before consolidation.
+For a general cross-discipline or explicitly comprehensive review, select every owner below. For a clearly scoped domain request, select the relevant owners and expand only when concrete evidence crosses another domain boundary. Confirm the selected owners are available, load them and complete their reviews before consolidation. Mark unselected domains `Not reviewed: outside requested coverage`.
 
 Review in this order so foundational failures are not hidden by polish:
 

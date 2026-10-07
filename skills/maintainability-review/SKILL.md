@@ -1,12 +1,12 @@
 ---
-name: simplify
-description: Read-only review for overengineering and avoidable complexity. Use when Charlie asks what can be deleted, whether code is overengineered, or requests a simplification review. Do not use for an ordinary implementation request that merely uses the word simplify.
+name: maintainability-review
+description: Read-only review for avoidable complexity or structural maintainability risk. Use for simplification or strict review, not ordinary implementation.
 license: MIT
 metadata:
   source: adapted from ponytail-review (github.com/DietrichGebert/ponytail)
 ---
 
-# Simplify
+# Maintainability Review
 
 Review the requested artifact for complexity that can be removed without changing the intended outcome. Do not edit unless a later request asks for the accepted changes.
 
@@ -29,6 +29,6 @@ Tags are `delete`, `reuse`, `stdlib`, `native`, `yagni`, and `shrink`.
 
 Do not report correctness, security, or performance defects as simplification findings. Do not flag a focused smoke test or assertion merely because it adds lines. Avoid line count theater. When useful, end with a clearly labeled rough estimate of code that could disappear, not a claimed exact total.
 
-When Charlie explicitly asks for an unusually strict maintainability pass, also load [`references/strict-maintainability.md`](references/strict-maintainability.md).
+For a named structural risk in abstractions, ownership, or caller understanding, or an explicit strict-review request, also load [`references/strict-maintainability.md`](references/strict-maintainability.md). Choose depth from the concrete question. Artifact size or consequence alone does not earn a deeper pass.
 
 If nothing material can be removed, return `Lean already.` and name the main surfaces checked.

@@ -4,7 +4,7 @@ This repository includes or adapts work from the following projects.
 
 ## Jakub Krehel skills
 
-The `better-ui`, `better-typography`, `better-layout`, `better-colors`, `better-accessibility`, `better-writing`, `better-interface`, and `interface-review` skills are from [jakubkrehel/skills](https://github.com/jakubkrehel/skills), copyright Jakub Krehel, under the MIT License.
+The `better-ui`, `better-typography`, `better-layout`, `better-colors`, `better-accessibility`, `better-writing`, and `better-interface` skills adapt [jakubkrehel/skills](https://github.com/jakubkrehel/skills), copyright Jakub Krehel, under the MIT License. `better-interface` incorporates the upstream `interface-review` change-scope workflow as conditional references.
 
 ## Emil Kowalski skills
 
@@ -22,9 +22,9 @@ See the `LICENSE` file in each skill directory.
 
 ## Ponytail
 
-The `simplify` skill is adapted from [DietrichGebert/ponytail](https://github.com/DietrichGebert/ponytail), copyright Dietrich Gebert, under the MIT License.
+The `maintainability-review` skill is adapted from [DietrichGebert/ponytail](https://github.com/DietrichGebert/ponytail), copyright Dietrich Gebert, under the MIT License.
 
-See `skills/simplify/LICENSE`.
+See `skills/maintainability-review/LICENSE`.
 
 ## TypeSafe AI
 

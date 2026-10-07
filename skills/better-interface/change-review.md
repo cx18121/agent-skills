@@ -1,14 +1,8 @@
----
-name: interface-review
-disable-model-invocation: true
-description: Reviews your work across multiple categories like UI, typography, layout, color, writing and accessibility and gives you a detailed analysis of the findings.
----
+# Change review mode
 
-# Change review
+Load this reference from `better-interface` for a change review. Resolve the scope, expand changed files to the surfaces they affect, read both sides of the diff and classify every finding.
 
-This skill reviews a change rather than a screen. It resolves the scope, expands the changed files to the surfaces they affect, reads both sides of the diff and classifies every finding.
-
-Scope is all it owns. Domain rules belong to the `better-*` skills. Severity, consolidation, coverage, the cap and the verdict belong to `better-interface`, which this skill hands the review to.
+Scope and classification are all this reference owns. Domain rules belong to the `better-*` skills. Severity, consolidation, coverage, the cap and the verdict belong to the entry skill.
 
 Correctness, tests, security and performance belong to the project's general code review. Name the concern once and move on.
 
@@ -22,7 +16,7 @@ Read the change before forming an opinion of it. The stated intent decides what 
 
 ### 1. Resolve the change scope first
 
-The whole invocation is the target, so `/interface-review pr 482` reviews pull request 482. [Scope resolution](scope-resolution.md) holds the accepted targets and how each resolves.
+The target follows the entry command, so `/better-interface pr 482` reviews pull request 482. A named review domain limits coverage, not the Git target. [Scope resolution](scope-resolution.md) holds the accepted targets and how each resolves.
 
 With no target supplied, resolve in this order and stop at the first match:
 
@@ -76,7 +70,7 @@ Status by what the diff touched, not by which file it sits in: a line the change
 git blame -L <line>,<line> "$BASE" -- path/to/file
 ```
 
-Hand every finding up with its status attached and let `better-interface` apply its cap and verdict rules.
+Keep each finding's status attached through consolidation. Apply the entry skill's cap and verdict rules.
 
 ### 6. Hold the change to its stated intent
 
@@ -91,17 +85,15 @@ This is what surfaces the **incomplete** change. A surface review cannot see it,
 
 Do not report scope creep. Whether a change does too much is a process question, not an interface one.
 
-### 7. Hand the review to `better-interface`
+### 7. Continue the entry skill's review
 
-Hand `better-interface` the scope block, the affected surfaces and a status on every finding. It routes to the domain skills, applies severity, consolidates, enforces the cap and issues the verdict.
+Carry the scope block, affected surfaces and each finding's status into the entry skill's specialist selection, severity, consolidation and verification steps. Use this reference's change-scoped output below. There is no second skill invocation or separate verdict owner.
 
-If `better-interface` is unavailable, report the resolved scope and the file inventory, name it as the missing skill and stop. Do not invent a severity scale, a cap, or a verdict.
-
-### 8. Never mutate the working tree
+### 8. Preserve the working tree
 
 A change review is read-only, including the checkout. Fetch pull request refs; never check them out. `git fetch` writes only to `.git` and is permitted. `gh pr checkout`, `git checkout`, `git switch` and `git stash` rewrite the files the author has open. They fail against local edits or discard them, so they are never permitted.
 
-Rendered verification is opt-in. Mark visual and runtime claims **Not verified** unless the project exposes a cheap preview or the user asks for a rendered review. When they do, use an isolated worktree (`git worktree add /tmp/review-<n> refs/remotes/pr/<n>`) and remove it when done.
+Mark visual and runtime claims **Not verified** unless the project exposes a cheap safe preview or the user asks for rendered verification. Run a working-tree preview only when it cannot modify the author's files. If a rendered check needs another revision or generates files, use an isolated worktree (`git worktree add /tmp/review-<n> refs/remotes/pr/<n>`) and remove it when done.
 
 ## Before you finish
 
@@ -151,4 +143,4 @@ Then `Pre-existing` findings, at most three, highest severity first, stated plai
 
 The cap and the verdict cover `Introduced` and `Regression` only. `Pre-existing` findings sit outside the cap, so touching a legacy file cannot turn into a full-file audit. They sit outside the verdict too, so a change whose only findings are pre-existing is an `Approve`.
 
-End with `Block` when any `HIGH` remains and `Approve` otherwise, leaving the remaining findings in the table as work to do. When `better-interface` is available, the severity scale and the cap come from it.
+End with `Block` when any `HIGH` remains and `Approve` otherwise, leaving the remaining findings in the table as work to do. The severity scale and the cap come from the entry skill. `Approve` covers only inspected surfaces. Unavailable proof stays explicit.

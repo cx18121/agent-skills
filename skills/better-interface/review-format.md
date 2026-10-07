@@ -43,4 +43,4 @@ End with one of two:
 
 ## Change-scoped reviews
 
-When `interface-review` resolved the scope from version control, it supplies the scope block, a status on every finding and the change-scoped format, which its `## Review output format` holds. Severity, ranking, the cap and the verdict are the ones above, and all four cover `Introduced` and `Regression` only.
+For change mode, use [change-review.md](change-review.md#review-output-format) for the scope block, finding statuses and change-scoped format. Severity, ranking, the cap and the verdict are the ones above, and all four cover `Introduced` and `Regression` only. The coverage table still includes every domain, with unselected domains marked outside requested coverage.
