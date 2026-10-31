@@ -13,10 +13,12 @@ When the draft may have been machine-written, or the user says it reads as gener
 
 
 1. Preserve the facts, uncertainty, and intended meaning. Do not turn an estimate into a measured result or a suggestion into a decision.
-2. Give each sentence one main point. Split cramped sentences, but keep the explanation complete. Shorter is useful only when the reader still understands the claim.
-3. Name the person or tool doing the work. Explain necessary technical terms on first use. Replace invented compounds with ordinary phrasing.
-4. Remove empty emphasis and repeated explanations. Use one example when it helps. Do not pad lists to three items for rhythm.
-5. Read the result as a newcomer. Check that each clause adds needed information and that causes, contrasts, and exceptions remain clear.
+2. Keep the register the document needs. Plain means clear, not casual: docs, READMEs, and articles stay neutral and technical, and a revision keeps the author's own voice. Keep every technical specific a reader would act on, such as names, numbers, mechanisms, and limits.
+3. Write about the subject. Notes about how you checked, what you verified, or the work's status belong in your report to Charlie, not in reader-facing text.
+4. Give each sentence one main point. Split cramped sentences, but keep the explanation complete. Shorter is useful only when the reader still understands the claim.
+5. Name the person or tool doing the work. Explain necessary technical terms on first use. Replace invented compounds with ordinary phrasing.
+6. Remove empty emphasis and repeated explanations. Use one example when it helps. Do not pad lists to three items for rhythm.
+7. Read the result as a newcomer. Check that each clause adds needed information and that causes, contrasts, and exceptions remain clear.
 
 ## Example
 

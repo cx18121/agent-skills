@@ -5,8 +5,6 @@ description: Reproduction signals, chronology, and hypothesis testing for hard, 
 
 # Diagnosing Bugs
 
-The active harness process owns whether the work is read only, includes repair, or belongs to a performance route. This skill contributes diagnostic technique and never expands that authority.
-
 Use this method for bugs that do not yield to a direct repair. Keep confirmed facts, falsified hypotheses, and open questions separate throughout the investigation.
 
 ## Establish the failure

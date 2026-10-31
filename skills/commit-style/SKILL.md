@@ -5,7 +5,7 @@ description: Mandatory when writing, amending, squashing, or proposing a commit 
 
 # Commit style
 
-Inspect the actual change before naming it.
+Inspect the actual change before naming it. Stage only the intended change and leave unrelated work in place.
 
 Use `<type>(<scope>): <summary>`. The scope is optional and names a stable lowercase subsystem. Omit it for broad changes.
 

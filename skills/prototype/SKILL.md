@@ -1,11 +1,11 @@
 ---
 name: prototype
-description: Artifact patterns for throwaway logic and UI prototypes. Use after the active harness process has established the prototype question and disposal boundary.
+description: Artifact patterns for throwaway logic and UI prototypes. Use when Charlie wants a disposable artifact to compare options or answer a design question.
 ---
 
 # Prototype
 
-The active harness process owns the question, mutation authority, and disposal decision. This skill only chooses and builds the smallest useful artifact pattern.
+Name the question the prototype answers and where it will live before building. Keep it separate from production code and label its sample data.
 
 A prototype is **throwaway code that answers a question**. The question decides the shape.
 

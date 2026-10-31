@@ -26,6 +26,10 @@ The product has one voice and its existing copy establishes it. A local edit doe
 | Errors, destructive confirmations | Calm, plain, zero playfulness |
 | Data loss, security | Serious, explicit |
 
+## Copy describes the product
+
+Product copy tells the user what the product does and what to do next. Testing limits, data coverage, and implementation details belong in your report to Charlie.
+
 ## Address the reader directly
 
 In instructional copy, write "you", not "the user". In errors, "we" invites ambiguity and reads as deflection, so prefer "Unable to load content" over "We're having trouble loading this content". An established first-person voice can stay in low-stakes copy where it still reads clearly.
