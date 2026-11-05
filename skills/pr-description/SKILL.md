@@ -15,7 +15,7 @@ A description exists so a reviewer can judge the change, and so someone who find
 
 **Claim only what you checked.** A reviewer trusts every line. Reasons come from the request, ticket or thread. Behaviour comes from reading the diff. Checks and screenshots come from things you actually ran or captured. When something is unknown or unchecked, say so in a few words, which is more useful than a guess.
 
-**Size it to what the reviewer must judge.** Most PRs need a few sentences, and about 150 words is plenty for most of the rest. Spend more only where the risk is: money, data, migrations, rollout. Length that comes from narrating how the work was done hides the lines that matter. When the PR is too big to describe briefly, tell the user it may be worth splitting.
+**Size it to what the reviewer must judge.** Most PRs need a few sentences, and about 150 words is plenty for most of the rest. Spend more only where the risk is: money, data, migrations, rollout. Leave out internal details the reviewer does not need to judge the change, including the story of how the work was done. They hide the lines that matter. When the PR is too big to describe briefly, tell the user it may be worth splitting.
 
 **Show when it is faster than telling.** A screenshot carries a visible change better than any sentence, and a small Mermaid diagram carries a flow between systems that words make hard to follow. Use them for that, not as decoration.
 
@@ -24,7 +24,7 @@ A description exists so a reviewer can judge the change, and so someone who find
 The opening has no heading. Add more only when it helps the reviewer:
 
 - A bullet per change when there are several, each starting with what it touches.
-- **Review notes** for where the risk is, a recorded rejected alternative, or a question for the reviewer.
+- **Review notes** only for what a careful reviewer would otherwise miss or must decide: a risk the diff hides, an alternative they would propose that was ruled out, or a question for them.
 - **Verification** for checks beyond the automated tests, and what was not checked.
 
 Write plain, complete sentences with common words, following the `plain-writing` skill. Write the title with the `commit-style` skill. When editing an existing body, keep the images, links and ticked boxes a person put there, because `gh pr edit` replaces the whole body.
@@ -46,18 +46,17 @@ Agents cannot attach screenshots to PR descriptions, because the pinned gh 2.97 
 </example>
 
 <example kind="feature">
-Björn at Understatement built a product page widget and needs a near identical one for his cart drawer. Today he rebuilds it by hand. This lets merchants and the agent copy widgets.
+Merchants who want the same widget in a second place, such as a product page and a cart drawer, rebuild it by hand. This lets merchants and the agent copy widgets.
 
-- **Widget list:** a Duplicate button makes "Copy of …" with the same design. It is not placed anywhere until the merchant places it.
+- **Widget list:** a Duplicate button makes "Copy of …" with the same design. The copy is not placed anywhere until the merchant places it.
   ![Duplicate button on a widget card in the widget list](./after.png)
 - **Chat:** the agent can list, read, create and copy widgets, and keeps editing the copy after making it.
-  ![Chat card linking to the new copy](./chat.png)
 - The session class rename is mechanical.
 
 **Review notes**
 - A copy gets its own style scope, so editing it never changes the original on the storefront.
 
 **Verification**
-- Björn's request ran in one chat on a dev store: the agent copied the bar, shortened its text and placed it above the drawer's checkout button.
-- Not checked on his live store.
+- On a dev store, the agent copied a product page bar into the cart drawer, shortened its text and placed it above the checkout button.
+- Not checked on a live store.
 </example>
