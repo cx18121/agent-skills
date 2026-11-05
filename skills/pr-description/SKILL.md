@@ -15,7 +15,7 @@ A description exists so a reviewer can judge the change, and so someone who find
 
 **Claim only what you checked.** A reviewer trusts every line. Reasons come from the request, ticket or thread. Behaviour comes from reading the diff. Checks and screenshots come from things you actually ran or captured. When something is unknown or unchecked, say so in a few words, which is more useful than a guess.
 
-**Size it to what the reviewer must judge.** Most PRs need a few sentences, and about 150 words is plenty for most of the rest. Spend more only where the risk is: money, data, migrations, rollout. Leave out internal details the reviewer does not need to judge the change, including the story of how the work was done. They hide the lines that matter. When the PR is too big to describe briefly, tell the user it may be worth splitting.
+**Size it to what the reviewer must judge.** Write the shortest description that lets the reviewer judge the change. Most PRs need a few sentences, and about 150 words is plenty for almost all of the rest, however large the diff. Leave out internal details the reviewer does not need, including the story of how the work was done. They hide the lines that matter. When the PR is too big to describe briefly, tell the user it may be worth splitting.
 
 **Show when it is faster than telling.** A screenshot carries a visible change better than any sentence, and a small Mermaid diagram carries a flow between systems that words make hard to follow. Use them for that, not as decoration.
 
