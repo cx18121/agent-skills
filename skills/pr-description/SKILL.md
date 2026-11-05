@@ -1,50 +1,55 @@
 ---
 name: pr-description
-description: Write or edit a GitHub pull request title and description in the concise, plain convention Charlie prefers. Use whenever creating, opening, or updating a PR body or title (gh pr create, gh pr edit), or when asked to write, fix, or shorten a PR description.
+description: Write or edit a pull request title and description. Use before `gh pr create` or `gh pr edit`, when asked to write, fix or shorten a PR description, or when adding screenshots or diagrams to a PR.
 ---
 
 # PR descriptions
 
-This is the convention Charlie prefers for his PR bodies and titles. It is his personal style, not a company standard. Apply it whenever you write or edit a PR, before you run `gh pr create` or `gh pr edit`.
+A PR description is for a reviewer who has opened no files. It says who the change is for, what was wrong, and what is different now. The diff carries the detail.
 
-## Shape
+**Keep the body under 150 words**, not counting images and diagrams. Bullets are one short sentence, two at most. A one file fix is two to four lines.
 
-- Lead with one or two sentences that say what was broken and why. Give the problem and its cause, not just what you changed.
-- Then add up to three bullets, and only if the change has distinct parts. Often you need none or one. Do not pad to three.
-- Write each bullet as a plain full sentence. A bullet can start with the name of the file, test, or component it covers.
-- For a trivial change, one line is enough.
-- Note what you deliberately did not change when that helps the reader, e.g. "Existing saved filters still work as before."
-- Describe only the main change. Do not mention incidental or unrelated fixes that happen to ride along in the diff, like a small build fix.
-- Do not add an issue close line like `Closes #123.` at the end.
-- Each bullet states its one main outcome in one or two sentences. Secondary behaviors that the diff shows on its own, like skip handling or a side effect on another feature, do not get sentences.
-- Never enumerate field or file names the reviewer will see in the diff. Say what the change amounts to instead, e.g. "the classes now match the provider response", not the list of fields.
-- Do not mention where test fixtures came from or how the change was tested. That is verification narration even when it sounds like a feature.
-- A related sub-fix inside the same change does not get its own closing mention. The body sells the change, the diff holds the inventory.
+## Write it
 
-Keep the whole body concise and easy to read. The body must not be longer than the diff it covers.
+1. **Opening, no heading.** Line 1 says who is affected and what is wrong for them, in their terms: the screen, the workflow, the failure. Line 2 says what this PR does about it. Take the reason from the request, ticket or thread. When none gives it, ask the user, or write "The PR gives no reason."
+2. **Changes.** When there are two or more changes a person could notice, give each a bullet that starts with the surface it touches and says what someone now sees or can do. End with one line naming the mechanical part, such as renames or moved code.
+3. **Pictures.** Put a screenshot beside every change visible on screen, a before and after pair when something existing changed. Use a short GIF when the interaction is the point. When the way services, jobs or external systems connect changes, add one small Mermaid diagram.
+4. **Review notes**, only when there is something to say: the riskiest part and where to look first, a rejected alternative that a source records, or a direct question for the reviewer.
+5. **Verification**, only for checks beyond the automated tests, such as a run in the real app or on a live store. Link the evidence or point to the screenshots. Say what was not checked.
 
-## Plain writing
+Use headings only when the body has two or more sections after the opening.
 
-Write the body the way a person writes. Run the `plain-writing` skill for the full rules. The ones that matter most in PRs:
+## Then cut
 
-- No dashes of any kind, including em dashes and number ranges. Use the word "to" for a range.
-- No semicolon joining two clauses, and no colon used to set up a point. Use a colon only to introduce a list.
-- Simple everyday words, complete sentences, no jargon.
-- Name the data and its source directly. Replace `canonical` with the specific meaning, such as `the complete response from the service`.
-- Do not invent a hyphenated phrase to sound compact.
+Read the draft as the reviewer. Delete every line they can do without: testing recaps, implementation steps, class and field names, anything said twice. Count the words and keep cutting until the body is under 150.
 
-## Never put in a PR body
+## Rules
 
-- A verification or testing recap, or gate and command output.
-- Code review or Codex narration.
-- An implementation play by play.
-- A What, Why, Scope, How to test template, or section headers on a small diff.
-- A wall of text.
+- Every claim is true and sourced. Write only reasons, alternatives and checks that a source or your own work shows.
+- Write plain, complete sentences with common words. Join clauses with a period, a comma or "and". Dashes and semicolons stay out of the body.
+- Make the change the subject: "The list now has a Duplicate button", rather than "I added".
+- When the PR holds unrelated changes, tell the user it may be worth splitting. Until it is split, give each unrelated change its own bullet so nothing in the diff goes undescribed.
+- Leave out `Closes #123` lines. Write the title with the `commit-style` skill.
+- When editing a body, keep every image, link and ticked box a person put there.
 
-That belongs in the conversation or the commits, not the PR.
+## Attaching images
 
-## Title
+`gh` 2.99 or later uploads images. Reference the file in the body, `![Duplicate button on the widget list](./after.png)`, then pass `--attach ./after.png` to `gh pr create` or `gh pr edit`. With an older `gh`, ask the user how to attach them.
 
-Use the `commit-style` skill for the pull request title.
+## Example
 
-This skill owns only the title and body text. The current request and repository delivery rules decide whether to create the pull request, whether it is ready or draft, and whether review is needed first.
+> Björn at Understatement built a product page widget and needs a near identical one for his cart drawer. Today he has to rebuild it by hand.
+>
+> - **Widget list:** a Duplicate button makes "Copy of …" with the same design and no placements.
+>   ![Duplicate button on the widget list](./after.png)
+> - **Chat:** the agent can list, read, create and copy widgets, and keeps editing the copy afterwards.
+>   ![Copy card in chat](./chat.png)
+> - The session class rename is mechanical.
+>
+> **Review notes**
+> - A copy gets its own CSS handle and no placements, so it never shows twice on the storefront.
+> - Rolling back a chat change now releases the surface link first. It used to fail on a foreign key.
+>
+> **Verification**
+> - Björn's request ran end to end in one chat on a dev slot (screenshots above).
+> - Not checked on his live store.
