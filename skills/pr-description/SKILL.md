@@ -15,7 +15,7 @@ A description exists so a reviewer can judge the change, and so someone who find
 
 **Claim only what you checked.** A reviewer trusts every line. Reasons come from the request, ticket or thread. Behaviour comes from reading the diff. Checks and screenshots come from things you actually ran or captured. When something is unknown or unchecked, say so in a few words, which is more useful than a guess.
 
-**Size it to what the reviewer must judge.** Write the shortest description that lets the reviewer judge the change. Most PRs need a few sentences, and about 150 words is plenty for almost all of the rest, however large the diff. Leave out internal details the reviewer does not need, including the story of how the work was done. They hide the lines that matter. Shorten by leaving out whole facts the reviewer can do without, and write every fact you keep as a full sentence. Squeezing facts into fragments, bare lists or long clause chains keeps the length and loses the clarity. When the PR is too big to describe briefly, tell the user it may be worth splitting.
+**Size it to what the reviewer must judge.** Write the shortest description that lets the reviewer judge the change. Length follows the number of judgments the reviewer has to make, not the size of the diff, the number of review rounds, or the effort behind it, so a description is never an inventory of everything that changed. Most PRs need a few sentences, and about 150 words is plenty for almost all of the rest, however large the diff. Leave out internal details the reviewer does not need, including the story of how the work was done. They hide the lines that matter. Shorten by leaving out whole facts the reviewer can do without, and write every fact you keep as a full sentence. Squeezing facts into fragments, bare lists or long clause chains keeps the length and loses the clarity.
 
 **Show when it is faster than telling.** A screenshot carries a visible change better than any sentence, and a small Mermaid diagram carries a flow between systems that words make hard to follow. Use them for that, not as decoration.
 
@@ -26,6 +26,8 @@ The opening has no heading. Add more only when it helps the reviewer:
 - A bullet per change when there are several, each starting with what it touches.
 - **Review notes** only for what a careful reviewer would otherwise miss or must decide: a risk the diff hides, an alternative they would propose that was ruled out, or a question for them.
 - **Verification** for checks beyond the automated tests, and what was not checked.
+
+Before posting, reread the draft as the reviewer and name, for each line, the judgment it helps them make. Cut every line that helps with none.
 
 Write plain, complete sentences with common words, following the `plain-writing` skill. Write the title with the `commit-style` skill. When editing an existing body, keep the images, links and ticked boxes a person put there, because `gh pr edit` replaces the whole body.
 
