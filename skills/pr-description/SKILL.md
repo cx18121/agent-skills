@@ -21,7 +21,17 @@ A description exists so a reviewer can judge the change, and so someone who find
 
 ## Shape
 
-The opening has no heading. Add more only when it helps the reviewer:
+Put the whole description inside a fold, so Charlie can add his own opening above it. Keep the blank line after `</summary>`, or GitHub will not render the Markdown inside.
+
+```markdown
+<details>
+<summary>Agent description</summary>
+
+...description...
+</details>
+```
+
+Inside the fold, the opening has no heading. Add more only when it helps the reviewer:
 
 - A bullet per change when there are several, each starting with what it touches.
 - **Review notes** only for what a careful reviewer would otherwise miss or must decide: a risk the diff hides, an alternative they would propose that was ruled out, or a question for them.
@@ -29,7 +39,7 @@ The opening has no heading. Add more only when it helps the reviewer:
 
 Before posting, reread the draft as the reviewer and name, for each line, the judgment it helps them make. Cut every line that helps with none.
 
-Write plain, complete sentences with common words, following the `plain-writing` skill. Write the title with the `commit-style` skill. When editing an existing body, keep the images, links and ticked boxes a person put there, because `gh pr edit` replaces the whole body.
+Write plain, complete sentences with common words, following the `plain-writing` skill. Write the title with the `commit-style` skill. When editing an existing body, keep the text above the fold, and the images, links and ticked boxes a person put there, because `gh pr edit` replaces the whole body.
 
 ## Attaching images
 
@@ -40,14 +50,25 @@ Write plain, complete sentences with common words, following the `plain-writing`
 Three sizes. Match the PR in front of you, not the shape of an example.
 
 <example kind="small fix">
+<details>
+<summary>Agent description</summary>
+
 Agents could not load the surface-portal-debug skill. Its description contains "(surface): layout", which YAML reads as a nested mapping. Quoting the description fixes the parse.
+</details>
 </example>
 
 <example kind="chore">
+<details>
+<summary>Agent description</summary>
+
 Agents cannot attach screenshots to PR descriptions, because the pinned gh 2.97 has no upload option. This raises the pin to 2.103.3, which adds `--attach` to `gh pr create` and `gh pr edit`.
+</details>
 </example>
 
 <example kind="feature">
+<details>
+<summary>Agent description</summary>
+
 Merchants who want the same widget in a second place, such as a product page and a cart drawer, rebuild it by hand. This lets merchants and the agent copy widgets.
 
 - **Widget list:** a Duplicate button makes "Copy of …" with the same design. The copy is not placed anywhere until the merchant places it.
@@ -61,4 +82,5 @@ Merchants who want the same widget in a second place, such as a product page and
 **Verification**
 - On a dev store, the agent copied a product page bar into the cart drawer, shortened its text and placed it above the checkout button.
 - Not checked on a live store.
+</details>
 </example>
