@@ -9,13 +9,15 @@ A description exists so a reviewer can judge the change, and so someone who find
 
 ## Principles
 
-**Lead with the need.** The first lines are the only ones every reader sees, so spend them on why the change exists: who hits what problem, or what is blocked, and what this PR does about it. Phrase the need so it would hold under a different fix, because that is what lets the reviewer judge whether this fix meets it.
+**Open with what changes and why.** The first lines are the only ones every reader sees, so spend one or two sentences on what the PR does and the problem it solves. State the problem itself, so the reviewer can judge whether this fix meets it. The request, the people involved and the history behind the change belong in the ticket.
 
 **Describe behaviour, not code.** The diff already shows the code. The description says what is now different for the people and systems the change touches, including what they would not expect. Name code only where it tells the reviewer where to look.
 
 **Claim only what you checked.** A reviewer trusts every line. Reasons come from the request, ticket or thread. Behaviour comes from reading the diff. Checks and screenshots come from things you actually ran or captured. When something is unknown or unchecked, say so in a few words, which is more useful than a guess.
 
 **Size it to what the reviewer must judge.** Write the shortest description that lets the reviewer judge the change. Length follows the number of judgments the reviewer has to make, not the size of the diff, the number of review rounds, or the effort behind it, so a description is never an inventory of everything that changed. Most PRs need a few sentences, and about 150 words is plenty for almost all of the rest, however large the diff. Leave out internal details the reviewer does not need, including the story of how the work was done. They hide the lines that matter. Shorten by leaving out whole facts the reviewer can do without, and write every fact you keep as a full sentence. Squeezing facts into fragments, bare lists or long clause chains keeps the length and loses the clarity.
+
+**Make every sentence news.** Each sentence tells the reviewer something they could not assume from the title, the diff summary or how the codebase already works. A line confirming the default, such as other behaviour staying the same, tells them nothing.
 
 **Show when it is faster than telling.** A screenshot carries a visible change better than any sentence, and a small Mermaid diagram carries a flow between systems that words make hard to follow. Use them for that, not as decoration.
 
@@ -34,8 +36,8 @@ Put the whole description inside a fold, so Charlie can add his own opening abov
 Inside the fold, the opening has no heading. Add more only when it helps the reviewer:
 
 - A bullet per change when there are several, each starting with what it touches.
-- **Review notes** only for what a careful reviewer would otherwise miss or must decide: a risk the diff hides, an alternative they would propose that was ruled out, or a question for them.
-- **Verification** for checks beyond the automated tests, and what was not checked.
+- **Review notes:** a few one-line bullets at most, each something the reviewer must do or decide, or would otherwise miss: a release order, a risk the diff hides, an alternative they would propose that was ruled out, or a question for them.
+- **Verification:** one line for the manual check that matters most, and one for the most important thing left unchecked. CI shows the automated tests.
 
 Before posting, reread the draft as the reviewer and name, for each line, the judgment it helps them make. Cut every line that helps with none.
 
