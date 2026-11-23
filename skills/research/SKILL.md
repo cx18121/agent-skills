@@ -1,7 +1,7 @@
 ---
 name: research
 description: Source-grounded web research for multi-source comparisons, landscape surveys, academic, company, or market research, and decisions that depend on current external evidence. Simple lookups and known-URL reading use ordinary web tools.
-compatibility: Requires pi-web-access tools and the lazy Exa server behind the mcp gateway.
+compatibility: Requires pi-web-access tools and the deferred Exa MCP server via tool_search.
 ---
 
 # Research
@@ -26,14 +26,14 @@ Use both broad `web_search` and Exa when source diversity could change the concl
 
 ## Exa through MCP
 
-Exa tools stay behind the lazy `mcp` gateway. Connect or search the `exa` server when needed. Use only:
+Exa tools are registered as deferred native MCP tools under `mcp__exa`. Load them with `tool_search` when needed. Use only:
 
-- `exa_web_search_exa`
-- `exa_web_search_advanced_exa`
-- `exa_web_fetch_exa`
-- `exa_agent_run`
+- `mcp__exa__web_search_exa`
+- `mcp__exa__web_search_advanced_exa`
+- `mcp__exa__web_fetch_exa`
+- `mcp__exa__agent_run`
 
-Use `mcp` tool discovery or description before the first call when the current schema is not visible. Exa owns those schemas, so this skill does not restate their parameters.
+Load the tool schema through `tool_search` before the first call. Exa owns those schemas, so this skill does not restate their parameters.
 
 For advanced search, bound the result count and extracted content. When the described schema exposes `textMaxCharacters` and `highlightsMaxCharacters`, set both; start with 1,000 to 3,000 characters per result. Prefer focused highlights over full text and increase the bounds only when the first result is insufficient. In live testing, three unbounded results produced more than 140,000 characters.
 

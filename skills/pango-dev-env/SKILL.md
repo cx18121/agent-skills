@@ -15,6 +15,10 @@ logs, queues, tests, and service diagnosis. Treat current CLI help as the comman
 source of truth. Read `wiki/infrastructure/local-development.mdx` when setup or
 environment background is needed instead of loading it for every focused test.
 
+Write ticket-specific design decisions and settled scope into the Linear ticket
+body via `pango_ticket_body` rather than agent memory. Memory is only for
+cross-task preferences that apply beyond one ticket.
+
 ## Execution host
 
 Follow the project's `AGENTS.md` and `pango-local-dev` for host selection.
