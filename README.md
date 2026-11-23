@@ -18,7 +18,14 @@ Add the absolute `skills` directory to Pi's `skills` setting:
 }
 ```
 
-Restart Pi. You can also copy or symlink individual skill directories into `~/.agents/skills`.
+Restart Pi. You can also link every skill in this repository into `~/.agents/skills` and verify the setup:
+
+```bash
+./scripts/bootstrap
+./scripts/check
+```
+
+`scripts/bootstrap` creates symlinks in `~/.agents/skills` without overwriting unmanaged third-party skill directories. `scripts/check` verifies every repository skill link and runs the review-skill tests.
 
 ## Other agents
 

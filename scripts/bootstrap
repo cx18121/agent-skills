@@ -1,0 +1,28 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+root=$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")/.." && pwd)
+target_dir="${AGENTS_SKILLS_DIR:-$HOME/.agents/skills}"
+mkdir -p "$target_dir"
+
+linked=0
+for skill_dir in "$root"/skills/*; do
+  [[ -d "$skill_dir" && -f "$skill_dir/SKILL.md" ]] || continue
+  name=$(basename "$skill_dir")
+  dest="$target_dir/$name"
+  if [[ -L "$dest" ]]; then
+    if [[ "$(readlink "$dest")" == "$skill_dir" ]]; then
+      continue
+    fi
+    ln -sfn "$skill_dir" "$dest"
+    linked=$((linked + 1))
+  elif [[ -e "$dest" ]]; then
+    printf 'Refusing to overwrite non-symlink %s. Move or remove it first.\n' "$dest" >&2
+    exit 1
+  else
+    ln -s "$skill_dir" "$dest"
+    linked=$((linked + 1))
+  fi
+done
+
+printf 'Linked %d skill(s) into %s.\n' "$linked" "$target_dir"

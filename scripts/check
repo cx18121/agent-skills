@@ -1,0 +1,35 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+root=$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")/.." && pwd)
+target_dir="${AGENTS_SKILLS_DIR:-$HOME/.agents/skills}"
+
+missing=0
+for skill_dir in "$root"/skills/*; do
+  [[ -d "$skill_dir" && -f "$skill_dir/SKILL.md" ]] || continue
+  name=$(basename "$skill_dir")
+  dest="$target_dir/$name"
+  if [[ ! -L "$dest" || "$(readlink "$dest")" != "$skill_dir" ]]; then
+    printf 'Skill %s is not linked to %s.\n' "$dest" "$skill_dir" >&2
+    missing=$((missing + 1))
+  fi
+done
+
+if (( missing > 0 )); then
+  printf '%d skill link(s) out of sync. Run scripts/bootstrap.\n' "$missing" >&2
+  exit 1
+fi
+
+unmanaged=()
+if [[ -d "$target_dir" ]]; then
+  for entry in "$target_dir"/*; do
+    [[ -e "$entry" || -L "$entry" ]] || continue
+    name=$(basename "$entry")
+    if [[ ! -d "$root/skills/$name" ]]; then
+      unmanaged+=("$name")
+    fi
+  done
+fi
+
+node --test "$root/test/review-skills.test.mjs"
+printf 'Agent skills setup is ready (%d unmanaged skill(s) in %s).\n' "${#unmanaged[@]}" "$target_dir"
