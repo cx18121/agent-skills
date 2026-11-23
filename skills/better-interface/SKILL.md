@@ -49,12 +49,12 @@ For a general cross-discipline or explicitly comprehensive review, select every 
 
 Review in this order so foundational failures are not hidden by polish:
 
-1. `better-accessibility`
-2. `better-layout`
-3. `better-writing`
-4. `better-typography`
-5. `better-colors`
-6. `better-ui`
+1. [`better-accessibility`](../better-accessibility/SKILL.md)
+2. [`better-layout`](../better-layout/SKILL.md)
+3. [`better-writing`](../better-writing/SKILL.md)
+4. [`better-typography`](../better-typography/SKILL.md)
+5. [`better-colors`](../better-colors/SKILL.md)
+6. [`better-ui`](../better-ui/SKILL.md)
 
 From a domain skill loaded here, take its principles, its references and its verification checks. Its severity ladder and its format are for standalone use; the consolidated format, shared severity and finding cap in this file replace them.
 

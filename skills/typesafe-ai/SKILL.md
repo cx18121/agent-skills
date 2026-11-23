@@ -2,6 +2,7 @@
 name: typesafe-ai
 license: MIT
 description: Use when integrating or evaluating TypeSafe's Jev models.
+disable-model-invocation: true
 ---
 
 # Build with TypeSafe

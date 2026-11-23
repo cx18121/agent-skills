@@ -1,6 +1,7 @@
 ---
 name: better-layout
 description: Helps with grouping, alignment, reading order, progressive disclosure and other details that make a good layout.
+disable-model-invocation: true
 ---
 
 # Layout

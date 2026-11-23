@@ -1,6 +1,7 @@
 ---
 name: better-writing
 description: Focuses on improving product copy in your project.
+disable-model-invocation: true
 ---
 
 # Interface writing

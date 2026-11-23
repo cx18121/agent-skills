@@ -1,6 +1,7 @@
 ---
 name: apple-design
 description: Use for gesture-driven and physics-based interaction, springs, drag and swipe behavior, sheets, momentum, interruption, and Apple material or depth effects. Not for general typography, ordinary frontend work, accessibility review, or broad product critique.
+disable-model-invocation: true
 ---
 
 # Apple Design

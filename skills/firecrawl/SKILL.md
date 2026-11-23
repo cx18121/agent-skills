@@ -1,6 +1,7 @@
 ---
 name: firecrawl
 description: Use Firecrawl for an explicit Firecrawl request, site mapping, bulk crawling, structured web extraction, or live page interaction that the native web and browser tools cannot provide. Do not use for normal search or reading a known URL.
+disable-model-invocation: true
 ---
 
 # Firecrawl

@@ -1,6 +1,7 @@
 ---
 name: docker-cleanup
 description: Use when Charlie asks to free local Docker or OrbStack disk, remove unused containers, images, volumes, networks, or build cache, or diagnose recurring Docker disk growth.
+disable-model-invocation: true
 ---
 
 # Docker cleanup

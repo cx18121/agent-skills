@@ -1,6 +1,7 @@
 ---
 name: better-colors
 description: Helps you build a color system and answer anything about color in your project. You can generate palettes, use semantic tokens, convert between formats, check contrast and more.
+disable-model-invocation: true
 ---
 
 # Colors

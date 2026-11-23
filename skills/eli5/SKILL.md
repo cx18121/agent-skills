@@ -1,6 +1,7 @@
 ---
 name: eli5
 description: Explain a topic like I'm a 5 year old. Use when the user invokes /eli5 or asks for a dead-simple picture explainer of how something works.
+disable-model-invocation: true
 ---
 
 # eli5

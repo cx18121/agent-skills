@@ -1,6 +1,7 @@
 ---
 name: herdr
 description: Use only when the user explicitly mentions Herdr or requests its pane, tab, workspace, command, or agent controls. Requires HERDR_ENV=1. Not for generic terminal, delegation, or parallel work.
+disable-model-invocation: true
 ---
 
 # Herdr
