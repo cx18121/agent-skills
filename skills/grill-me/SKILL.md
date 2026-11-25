@@ -1,10 +1,9 @@
 ---
 name: grill-me
 description: Grill the user relentlessly about a plan, decision, or idea. Use when the user wants to stress-test their thinking, or uses any 'grill' trigger phrases.
-disable-model-invocation: true
 ---
 
-Interview the user relentlessly until you reach a shared understanding. Challenge premises, contradictions, and consequential assumptions. Map this as a **design tree**: every decision branches into the decisions that hang off it. Focus on questions whose answers could materially change the outcome.
+Interview the user relentlessly until you reach a shared understanding. Challenge whether the feature, layer, or abstraction is needed at all before drilling into implementation details, and press on contradictions and consequential assumptions. Map this as a **design tree**: every decision branches into the decisions that hang off it. Focus on questions whose answers could materially change the outcome.
 
 Work the tree in **rounds**. The **frontier** is every decision whose prerequisites are already settled: the questions you can ask _now_ without guessing at answers you haven't heard yet. Ask the whole frontier in one round: number each question and give your recommended answer. Then wait for the user's answers before the next round.
 

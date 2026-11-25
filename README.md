@@ -37,7 +37,7 @@ Run `node --test test/review-skills.test.mjs` to check review entry points, cond
 
 ## External services
 
-No credentials are stored in this repository. Skills that use external services read credentials from environment variables such as `FIRECRAWL_API_KEY` and `OPENAI_API_KEY`.
+No credentials are stored in this repository. Skills that use external services read credentials from environment variables such as `OPENAI_API_KEY`.
 
 
 ## Licenses
