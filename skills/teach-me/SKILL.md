@@ -6,7 +6,7 @@ disable-model-invocation: true
 
 # Teach Me
 
-Teach the named topic or the work from the current session in small stages. Start by asking the user to explain what they already understands. Use that answer to choose the first gap instead of giving a full lecture.
+Teach the named topic or the work from the current session in small stages. Start by asking the user to explain what they already understand. Use that answer to choose the first gap instead of giving a full lecture.
 
 For each stage:
 
