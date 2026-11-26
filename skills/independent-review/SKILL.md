@@ -25,7 +25,7 @@ Give the child everything it cannot recover from the sources:
 
 Ask it to challenge the premise as well as the implementation, including whether a simpler direction would serve better or whether the change could make the result worse.
 
-For a change review, use the `reviewer` agent template and give it the goal, the acceptance check, and where the change is. Run one review and, after fixes, one re-review. If the re-review still asks for changes, decide yourself and report what remains.
+For a plan challenge or change review, use the `reviewer` agent template and give it the goal, the acceptance check, and the plan or change location. Run one review and, after fixes, one re-review. If the re-review still asks for changes, decide yourself and report what remains.
 
 ## Choose the model
 
