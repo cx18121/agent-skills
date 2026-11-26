@@ -32,4 +32,10 @@ See `skills/maintainability-review/LICENSE`.
 
 See `skills/typesafe-ai/LICENSE`.
 
+## Jane Street
+
+The `teach-me` skill is adapted from `socratic-tutor` in [janestreet/agent_skills](https://github.com/janestreet/agent_skills), copyright 2026 Jane Street Group, LLC, under the MIT License.
+
+See `skills/teach-me/LICENSE`.
+
 Third-party product and project names are used only to identify their sources.
